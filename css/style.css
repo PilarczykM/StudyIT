@@ -39,6 +39,20 @@
 /* -----------------------------------------------
 02. =variables
 ----------------------------------------------- */
+:root {
+  --orange: hsl(30, 80%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0, 0%);
+  --black-90: hsl(0, 0, 10%);
+  --black-70: hsl(0, 0, 30%);
+  --black-alpha-40: hsl(0, 0, 0%, 0.4);
+  --yallow-light: hsl(44, 95%, 83%);
+  --green-light: hsl(158, 68%, 75%);
+  --red-light: hsl(0, 84%, 80%);
+  --orange-light: hsl(22, 85%, 80%);
+  --select-boc-bg-color: hsl(0, 0%, 100%);
+  --border-color-1: hsl(0, 0%, 90%);
+}
 
 /* -----------------------------------------------
 03. =overrides variables for - dark theme
