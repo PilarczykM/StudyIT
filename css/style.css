@@ -159,6 +159,54 @@ ul {
 /* -----------------------------------------------
 19. =header
 ----------------------------------------------- */
+.header {
+  border-bottom: 1px solid var(--border-color-2);
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-main .header-logo a {
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--black-70);
+}
+
+.header-main .header-logo span {
+  color: var(--main-color);
+  margin-left: 1rem;
+}
+
+.header-main .header-menu .menu {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.header-main .header-menu .menu .menu-item {
+  width: 100%;
+  margin: 0 4rem;
+}
+
+.header-main .header-menu .menu .menu-item a {
+  display: inline-block;
+  padding: 2.4rem 0;
+  font-weight: 400;
+  color: var(--black-90);
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+.header-backdrop,
+.header-close-btn,
+.header-hamburger-btn {
+  display: none;
+}
 
 /* -----------------------------------------------
 20. =footer
