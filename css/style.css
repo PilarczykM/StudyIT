@@ -181,25 +181,76 @@ ul {
   margin-left: 1rem;
 }
 
-.header-main .header-menu .menu {
+.header-menu .menu {
   display: flex;
   flex-direction: row;
   margin: 0;
   padding: 0;
 }
 
-.header-main .header-menu .menu .menu-item {
+.header-menu .menu-item {
   width: 100%;
   margin: 0 4rem;
+  position: relative;
 }
 
-.header-main .header-menu .menu .menu-item a {
-  display: inline-block;
+.header-menu .menu-item > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2.4rem 0;
   font-weight: 400;
   color: var(--black-90);
   text-transform: capitalize;
   transition: color 0.3s ease;
+}
+
+.header-menu .menu-item > a:hover {
+  color: var(--main-color);
+}
+
+.header-menu .menu-item > a > i {
+  font-size: 1.3rem;
+  pointer-events: none;
+  margin-left: 1.4rem;
+}
+
+.header-menu .sub-menu {
+  position: absolute;
+  background-color: var(--white);
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 21rem;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  transform: translateY(1rem);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .header-menu .menu-item-has-children:hover > .sub-menu {
+    visibility: visible;
+    opacity: 100;
+    transform: translateY(0);
+  }
+}
+
+.header-menu .sub-menu .sub-menu-item a {
+  display: block;
+  padding: 1rem 2rem;
+  color: var(--black-90);
+  text-transform: capitalize;
+}
+
+.header-menu .sub-menu .sub-menu-item a:hover {
+  color: var(--main-color);
 }
 
 .header-backdrop,
