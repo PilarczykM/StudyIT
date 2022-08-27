@@ -35,6 +35,7 @@
 /* -----------------------------------------------
 01. =google fonts
 ----------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 /* -----------------------------------------------
 02. =variables
@@ -53,6 +54,9 @@
   --select-boc-bg-color: hsl(0, 0%, 100%);
   --border-color-1: hsl(0, 0%, 90%);
 }
+html {
+  font-size: 62.5%;
+}
 
 /* -----------------------------------------------
 03. =overrides variables for - dark theme
@@ -61,6 +65,40 @@
 /* -----------------------------------------------
 04. =base
 ----------------------------------------------- */
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--body-bg-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--black-70);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--main-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  color: var(--white);
+  background-color: var(--main-color);
+}
 
 /* -----------------------------------------------
 05. =box 
