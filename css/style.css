@@ -113,6 +113,12 @@ h6 {
 /* -----------------------------------------------
 05. =box 
 ----------------------------------------------- */
+.box {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  padding: 3rem;
+}
 
 /* -----------------------------------------------
 06. =customized bootstrap classes
@@ -345,6 +351,34 @@ h6 {
 /* -----------------------------------------------
 22. =fun facts section
 ----------------------------------------------- */
+.fun-facts-section {
+  padding: 1.5rem 0;
+}
+.fun-facts-section h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.fun-facts-section p {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.fun-facts-section .fun-facts-item--black {
+  color: var(--black-70);
+}
+
+.fun-facts-section .fun-facts-item--green {
+  color: var(--green-light);
+}
+
+.fun-facts-section .fun-facts-item--red {
+  color: var(--red-light);
+}
+
+.fun-facts-section .fun-facts-item--orange {
+  color: var(--orange-light);
+}
 
 /* -----------------------------------------------
 23. =courses section
