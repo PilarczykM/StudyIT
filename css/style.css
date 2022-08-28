@@ -95,6 +95,16 @@ ul {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--black-90);
+  line-height: 1.3;
+}
+
 ::selection {
   color: var(--white);
   background-color: var(--main-color);
@@ -119,6 +129,23 @@ ul {
 /* -----------------------------------------------
 09. =buttons
 ----------------------------------------------- */
+.btn-theme {
+  background-color: var(--main-color);
+  color: var(--white);
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  padding: 0.8rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+  color: var(--white);
+  background-color: var(--button-hover-color);
+}
+
+.btn-theme:focus {
+  box-shadow: 0 0 0.8rem var(--main-color);
+}
 
 /* -----------------------------------------------
 10. =page loader
@@ -127,6 +154,33 @@ ul {
 /* -----------------------------------------------
 11. =circular img
 ----------------------------------------------- */
+.circular-img {
+  max-width: 36rem;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.circular-img img {
+  position: relative;
+  z-index: 1;
+}
+
+.circular-img-inner {
+  text-align: center;
+  border-radius: 0 0 18rem 18rem;
+  overflow: hidden;
+}
+
+.circular-img-circle {
+  height: 36rem;
+  width: 36rem;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
 
 /* -----------------------------------------------
 12. =forms
@@ -266,6 +320,27 @@ ul {
 /* -----------------------------------------------
 21. =banner section
 ----------------------------------------------- */
+.banner-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0;
+  min-height: 68rem;
+}
+
+.banner-section-row {
+  align-items: center;
+}
+
+.banner-text h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.banner-text h2 {
+  font-size: 2rem;
+  color: var(--main-color);
+}
 
 /* -----------------------------------------------
 22. =fun facts section
