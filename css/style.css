@@ -127,6 +127,15 @@ h6 {
 /* -----------------------------------------------
 07. =animation keyframes
 ----------------------------------------------- */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* -----------------------------------------------
 08. =section - padding, title
@@ -460,6 +469,65 @@ h6 {
 /* -----------------------------------------------
 24. =testimonials section
 ----------------------------------------------- */
+.testimonials-section .img-box {
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--red-light);
+  margin: 3rem auto 5rem;
+}
+
+.testimonials-section .img-box::before,
+.testimonials-section .img-box::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 15s linear infinite;
+}
+
+.testimonials-section .img-box::before {
+  height: 18rem;
+  width: 18rem;
+  left: -1.5rem;
+  top: -1.5rem;
+  border-left: 0.1rem solid var(--red-light);
+}
+
+.testimonials-section .img-box::after {
+  height: 21rem;
+  width: 21rem;
+  left: -3rem;
+  top: -3rem;
+  border-right: 0.1rem solid var(--red-light);
+}
+
+.testimonials-section .carousel-control-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-item h3 {
+  text-transform: capitalize;
+}
+.testimonials-item .text-1 {
+}
+.testimonials-item .text-2 {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.testimonials-section .carousel-control-prev,
+.testimonials-section .carousel-control-next {
+  position: relative;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: var(--main-color);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0.5rem 0.4rem 0;
+}
 
 /* -----------------------------------------------
 25. =bai section
