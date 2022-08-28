@@ -131,6 +131,25 @@ h6 {
 /* -----------------------------------------------
 08. =section - padding, title
 ----------------------------------------------- */
+.section-padding {
+  padding: 6rem 0;
+}
+
+.section-title {
+  margin-bottom: 4rem;
+}
+
+.section-title .title {
+  font-size: 2rem;
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+
+.section-title .sub-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--black-90);
+}
 
 /* -----------------------------------------------
 09. =buttons
@@ -383,6 +402,60 @@ h6 {
 /* -----------------------------------------------
 23. =courses section
 ----------------------------------------------- */
+.course-item {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.course-item .img-box img {
+  border-radius: 0.5rem;
+}
+
+.course-item .link {
+  color: var(--black-70);
+  display: inline-block;
+}
+
+.course-item .title {
+  text-transform: capitalize;
+  max-width: 1.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.course-item .title:hover {
+  color: var(--main-color);
+}
+
+.course-item .instructor {
+  text-transform: capitalize;
+  margin: 0 0 1.2rem;
+}
+
+.course-item .instructor img {
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.course-item .rating {
+  font-size: 1.4rem;
+}
+
+.course-item .average-rating,
+.course-item .average-stars {
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.course-item .price {
+  right: 1.5rem;
+  top: 1.5rem;
+  position: absolute;
+  background-color: var(--main-color);
+  color: var(--white);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.8rem;
+}
 
 /* -----------------------------------------------
 24. =testimonials section
