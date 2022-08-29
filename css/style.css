@@ -54,6 +54,7 @@
   --select-boc-bg-color: hsl(0, 0%, 100%);
   --border-color-1: hsl(0, 0%, 90%);
 }
+
 html {
   font-size: 62.5%;
 }
@@ -324,7 +325,7 @@ h6 {
   position: relative;
 }
 
-.header-menu .menu-item > a {
+.header-menu .menu-item>a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -335,11 +336,11 @@ h6 {
   transition: color 0.3s ease;
 }
 
-.header-menu .menu-item > a:hover {
+.header-menu .menu-item>a:hover {
   color: var(--main-color);
 }
 
-.header-menu .menu-item > a > i {
+.header-menu .menu-item>a>i {
   font-size: 1.3rem;
   pointer-events: none;
   margin-left: 1.4rem;
@@ -365,7 +366,7 @@ h6 {
 }
 
 @media screen and (min-width: 992px) {
-  .header-menu .menu-item-has-children:hover > .sub-menu {
+  .header-menu .menu-item-has-children:hover>.sub-menu {
     visibility: visible;
     opacity: 100;
     transform: translateY(0);
@@ -450,7 +451,7 @@ h6 {
   margin-right: 0.5rem;
 }
 
-.footer-bottom p > p {
+.footer-bottom p>p {
   display: block;
   text-transform: capitalize;
 }
@@ -479,6 +480,7 @@ h6 {
   font-weight: 700;
   text-transform: capitalize;
 }
+
 .banner-text h2 {
   font-size: 2rem;
   color: var(--main-color);
@@ -642,7 +644,7 @@ h6 {
 25. =bai section
 ----------------------------------------------- */
 .bai-section .circular-img-circle {
-background-color: var(--orange-light);
+  background-color: var(--orange-light);
 }
 
 /* -----------------------------------------------
