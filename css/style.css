@@ -382,11 +382,13 @@ h6 {
 .fun-facts-section {
   padding: 1.5rem 0;
 }
+
 .fun-facts-section h2 {
   font-weight: 700;
   font-size: 3rem;
   text-transform: uppercase;
 }
+
 .fun-facts-section p {
   text-transform: uppercase;
   margin: 0;
@@ -510,8 +512,7 @@ h6 {
 .testimonials-item h3 {
   text-transform: capitalize;
 }
-.testimonials-item .text-1 {
-}
+
 .testimonials-item .text-2 {
   margin: 0;
   text-transform: capitalize;
@@ -532,6 +533,9 @@ h6 {
 /* -----------------------------------------------
 25. =bai section
 ----------------------------------------------- */
+.bai-section .circular-img-circle {
+background-color: var(--orange-light);
+}
 
 /* -----------------------------------------------
 26. =courses details section
