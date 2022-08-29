@@ -350,6 +350,72 @@ h6 {
 /* -----------------------------------------------
 20. =footer
 ----------------------------------------------- */
+.footer-top {
+  padding: 5rem 0 2rem;
+  border-top: 0.1rem solid var(--border-color-2);
+}
+
+.footer-item {
+  margin: 0 0 2rem;
+}
+
+.footer-item h3 {
+  text-transform: capitalize;
+  margin: 0 0 0 2rem;
+}
+
+.footer-item .footer-logo {
+  color: var(--black-70);
+  text-transform: uppercase;
+}
+
+.footer-item .footer-logo span {
+  margin-left: 0.5rem;
+  color: var(--main-color);
+}
+
+.footer-item ul li:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+.footer-item ul a {
+  position: relative;
+  text-transform: capitalize;
+  color: var(--black-70);
+  transition: all 0.3s ease;
+}
+
+.footer-item ul a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 0.1rem;
+  background-color: var(--main-color);
+  transition: width 0.3s ease;
+}
+
+.footer-item ul a:hover {
+  color: var(--main-color);
+}
+
+.footer-item ul a:hover::before {
+  width: 100%;
+}
+
+.footer-item .social-icon {
+  margin-right: 0.5rem;
+}
+
+.footer-bottom p > p {
+  display: block;
+  text-transform: capitalize;
+}
+
+.footer-bottom span {
+  color: var(--main-color);
+}
 
 /* -----------------------------------------------
 21. =banner section
