@@ -47,7 +47,7 @@
   --black-90: hsl(0, 0, 10%);
   --black-70: hsl(0, 0, 30%);
   --black-alpha-40: hsl(0, 0, 0%, 0.4);
-  --yallow-light: hsl(44, 95%, 83%);
+  --yellow-light: hsl(44, 95%, 83%);
   --green-light: hsl(158, 68%, 75%);
   --red-light: hsl(0, 84%, 80%);
   --orange-light: hsl(22, 85%, 80%);
@@ -644,12 +644,81 @@ h6 {
 25. =bai section
 ----------------------------------------------- */
 .bai-section .circular-img-circle {
-  background-color: var(--orange-light);
+  background-color: var(--yellow-light);
 }
 
 /* -----------------------------------------------
 26. =courses details section
 ----------------------------------------------- */
+.course-header h2 {
+  font-size: 3rem;
+  margin: 0 0 1.5rem;
+  font-weight: 600;
+}
+
+.course-header .average-rating {
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.course-header .average-stars i {
+  font-size: 1.4rem;
+  color: var(--orange);
+}
+
+.course-header .rating span {
+  vertical-align: middle;
+}
+
+.course-header ul {
+  padding: 0;
+}
+
+.course-header ul li {
+  margin: 0.6rem 0 0;
+  text-transform: capitalize;
+}
+
+.course-header ul li span {
+  margin-left: .5rem;
+}
+
+.course-tabs {
+  margin: 3rem 0 2rem;
+}
+
+.course-tabs .nav-link {
+  margin: 0 1rem 0;
+}
+
+.course-curriculum .accordion-item {
+  border-color: var(--border-color-1);
+  background-color: transparent;
+}
+
+.course-curriculum .accordion-button {
+  background-color: transparent;
+  color: var(--main-color);
+  font-size: 2rem;
+  font-weight: 300;
+  flex-wrap: wrap;
+  padding-left: 3rem;
+}
+
+.course-curriculum .accordion-button.collapsed {
+  color: var(--black-90);
+}
+
+.course-curriculum .accordion-button::after {
+  position: absolute;
+  left: 1rem
+}
+
+.course-curriculum .accordion-button span {
+  position: absolute;
+  right: 1.7rem;
+  font-size: 1.4rem;
+}
 
 /* -----------------------------------------------
 27. =contact section
