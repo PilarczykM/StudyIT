@@ -231,6 +231,18 @@ h6 {
 /* -----------------------------------------------
 15. =breadcrumb
 ----------------------------------------------- */
+.breadcrumb-nav {
+  padding: 1rem 0;
+}
+
+.breadcrumb-nav .breadcrumb {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.breadcrumb-nav .breadcrumb .breadcrumb-item.active {
+  color: var(--black-70);
+}
 
 /* -----------------------------------------------
 16. =tabs
