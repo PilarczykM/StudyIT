@@ -220,6 +220,26 @@ h6 {
 /* -----------------------------------------------
 12. =forms
 ----------------------------------------------- */
+.form-control {
+  font-size: inherit;
+}
+
+.form-control::placeholder {
+  color: var(--main-color);
+  opacity: .5;
+}
+
+.btn-form {
+  margin-bottom: 1rem;
+}
+
+.form-title {
+  font-weight: 600;
+}
+
+form p {
+  font-size: 1.2rem;
+}
 
 /* -----------------------------------------------
 13. =video modal
