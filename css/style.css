@@ -889,3 +889,37 @@ form p {
 /* -----------------------------------------------
 27. =contact section
 ----------------------------------------------- */
+.contact-section h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.contact-section .contact-item {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  column-gap: 2rem;
+  grid-template-areas: 
+    "icon title"
+    "icon content";
+  margin: 3rem 0;
+}
+
+.contact-section .contact-item .icon-box {
+  grid-area: icon;
+  background-color: red;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section .contact-item h3 {
+  grid-area: title;
+}
+
+.contact-section .contact-item p {
+  grid-area: content;
+}
