@@ -720,6 +720,34 @@ h6 {
   font-size: 1.4rem;
 }
 
+.course-instructor h4 {
+  font-size: 1.6;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.course-instructor h4 span {
+  font-weight: 300;
+  color: var(--main-color);
+}
+
+.course-instructor ul li:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.course-instructor ul li i {
+  color: var(--main-color);
+}
+
+.course-instructor .img-box img {
+  max-width: 12.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-instructor .right-box ul {
+  padding-left: 0;
+}
+
 /* -----------------------------------------------
 27. =contact section
 ----------------------------------------------- */
