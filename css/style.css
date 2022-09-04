@@ -324,11 +324,16 @@ form p {
   position: fixed;
   height: 100vh;
   top: 0;
-  right: 0;
+  right: -23rem;
   z-index: 10;
   padding: 3rem;
   box-shadow: var(--shadow);
   background-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.style-switcher.open {
+  right: 0;
 }
 
 .style-switcher-toggler {
@@ -374,6 +379,10 @@ form p {
   font-size: 1.2rem;
   transition: all 0.3s ease;
   opacity: 0;
+}
+
+.theme-colors button.active::before {
+  opacity: 1;
 }
 
 .theme-colors .color-1 {

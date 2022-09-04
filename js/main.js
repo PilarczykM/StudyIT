@@ -36,3 +36,74 @@ function coursePreviewVideo() {
 }
 
 coursePreviewVideo();
+
+/* -----------------------------------------------
+03. =styleSwitcher
+----------------------------------------------- */
+function styleSwitcher() {
+  const styleSwitcher = document.querySelector(".js-style-switcher");
+  const styleSwitcherToggler = document.querySelector(
+    ".js-style-switcher-toggler"
+  );
+
+  // Toggle open / close acction
+  styleSwitcherToggler.addEventListener("click", function () {
+    styleSwitcher.classList.toggle("open");
+    this.querySelector("i").classList.toggle("fa-times");
+    this.querySelector("i").classList.toggle("fa-cog");
+  });
+}
+
+styleSwitcher();
+
+/* -----------------------------------------------
+04. = themeColors
+----------------------------------------------- */
+function themeColors() {
+  const colorKey = "color";
+  const colorStyle = document.querySelector(".js-color-style");
+  const themeColorsContainer = document.querySelector(".js-theme-colors");
+
+  if (localStorage.getItem(colorKey)) {
+    setColor();
+  } else {
+    localStorage.setItem(colorKey, "color-1");
+    setColor();
+  }
+
+  themeColorsContainer.addEventListener("click", ({ target }) => {
+    if (target.classList.contains("js-theme-color-item")) {
+      localStorage.setItem(
+        colorKey,
+        target.getAttribute("data-js-theme-color")
+      );
+
+      setColor();
+    }
+  });
+
+  function setColor() {
+    let path = colorStyle.getAttribute("href").split("/");
+    colorStyle.setAttribute(
+      "href",
+      path
+        .slice(0, path.length - 1)
+        .concat(localStorage.getItem(colorKey) + ".css")
+        .join("/")
+    );
+
+    if (document.querySelector(".js-theme-color-item.active")) {
+      document
+        .querySelector(".js-theme-color-item.active")
+        .classList.remove("active");
+    }
+
+    document
+      .querySelector(
+        "[data-js-theme-color=" + localStorage.getItem(colorKey) + "]"
+      )
+      .classList.add("active");
+  }
+}
+
+themeColors();
