@@ -131,7 +131,6 @@ function themeLightDarkMode() {
   function setMode() {
     const mode = localStorage.getItem(darkModeKey);
     let bodyTag = document.body;
-    console.log(bodyTag.classList);
 
     if (mode === "false" && bodyTag.classList.contains(lightDarkModeClass)) {
       bodyTag.classList.remove(lightDarkModeClass);
