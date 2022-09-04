@@ -1,7 +1,6 @@
 /* -----------------------------------------------
 01. =carouselTestimonial
 ----------------------------------------------- */
-
 function testimonialSlider() {
   var testimonialCarousel = document.getElementById("carouselTestimonial");
 
@@ -15,7 +14,6 @@ function testimonialSlider() {
 }
 
 testimonialSlider();
-
 /* -----------------------------------------------
 02. =carouselPreviewVideo
 ----------------------------------------------- */
