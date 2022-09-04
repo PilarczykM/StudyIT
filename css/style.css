@@ -226,7 +226,7 @@ h6 {
 
 .form-control::placeholder {
   color: var(--main-color);
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .btn-form {
@@ -319,6 +319,78 @@ form p {
 /* -----------------------------------------------
 18. =style switcher
 ----------------------------------------------- */
+.style-switcher {
+  width: 23rem;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 3rem;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+}
+
+.style-switcher-toggler {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 15%;
+  left: -4rem;
+  background-color: var(--main-color);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem 0 0 0.8rem;
+  cursor: pointer;
+}
+
+.style-switcher h3 {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--border-color-1);
+  padding: 0 0 1rem;
+}
+
+.style-switcher-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-1);
+  margin-bottom: 1rem;
+}
+
+.theme-colors button {
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  border-radius: 50%;
+  vertical-align: middle;
+  position: relative;
+}
+
+.theme-colors button::before {
+  content: "✔️";
+  font-weight: 900;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.theme-colors .color-1 {
+  background-color: hsl(0, 74%, 61%);
+}
+.theme-colors .color-2 {
+  background-color: hsl(230, 74%, 61%);
+}
+.theme-colors .color-3 {
+  background-color: hsl(36, 74%, 61%);
+}
+.theme-colors .color-4 {
+  background-color: hsl(277, 74%, 61%);
+}
+.theme-colors .color-5 {
+  background-color: hsl(164, 74%, 61%);
+}
 
 /* -----------------------------------------------
 19. =header
@@ -358,7 +430,7 @@ form p {
   position: relative;
 }
 
-.header-menu .menu-item>a {
+.header-menu .menu-item > a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -369,11 +441,11 @@ form p {
   transition: color 0.3s ease;
 }
 
-.header-menu .menu-item>a:hover {
+.header-menu .menu-item > a:hover {
   color: var(--main-color);
 }
 
-.header-menu .menu-item>a>i {
+.header-menu .menu-item > a > i {
   font-size: 1.3rem;
   pointer-events: none;
   margin-left: 1.4rem;
@@ -399,7 +471,7 @@ form p {
 }
 
 @media screen and (min-width: 992px) {
-  .header-menu .menu-item-has-children:hover>.sub-menu {
+  .header-menu .menu-item-has-children:hover > .sub-menu {
     visibility: visible;
     opacity: 100;
     transform: translateY(0);
@@ -462,7 +534,7 @@ form p {
 }
 
 .footer-item ul a::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -484,7 +556,7 @@ form p {
   margin-right: 0.5rem;
 }
 
-.footer-bottom p>p {
+.footer-bottom p > p {
   display: block;
   text-transform: capitalize;
 }
@@ -713,7 +785,7 @@ form p {
 }
 
 .course-header ul li span {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .course-tabs {
@@ -744,7 +816,7 @@ form p {
 
 .course-curriculum .accordion-button::after {
   position: absolute;
-  left: 1rem
+  left: 1rem;
 }
 
 .course-curriculum .accordion-button span {
@@ -765,7 +837,7 @@ form p {
 }
 
 .course-instructor ul li:not(:last-child) {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .course-instructor ul li i {
@@ -798,7 +870,7 @@ form p {
 }
 
 .rating-summary .rating-bars-item .progress {
-  height: .8rem;
+  height: 0.8rem;
   background-color: var(--border-color-1);
   width: calc(100% - 12rem);
   margin-right: 2rem;
@@ -813,13 +885,13 @@ form p {
 .cource-sidebar .img-box {
   position: relative;
   cursor: pointer;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   margin-bottom: 3rem;
 }
 
 .cource-sidebar .img-box::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -844,7 +916,7 @@ form p {
   justify-content: center;
   color: var(--white);
   border-radius: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: var(--main-color);
 }
 
@@ -878,7 +950,7 @@ form p {
 }
 
 .cource-sidebar .feature-list li::before {
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: var(--main-color); /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
@@ -898,7 +970,7 @@ form p {
   display: grid;
   grid-template-columns: 5rem 1fr;
   column-gap: 2rem;
-  grid-template-areas: 
+  grid-template-areas:
     "icon title"
     "icon content";
   margin: 3rem 0;
