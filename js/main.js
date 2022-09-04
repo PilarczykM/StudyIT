@@ -57,7 +57,7 @@ function styleSwitcher() {
 styleSwitcher();
 
 /* -----------------------------------------------
-04. = themeColors
+04. =themeColors
 ----------------------------------------------- */
 function themeColors() {
   const colorKey = "color";
@@ -107,3 +107,43 @@ function themeColors() {
 }
 
 themeColors();
+
+/* -----------------------------------------------
+05. =themeLightDarkMode
+----------------------------------------------- */
+function themeLightDarkMode() {
+  const darkModeKey = "dark-mode";
+  const lightDarkModeClass = "t-dark";
+  let toggler = document.querySelector(".js-dark-mode");
+
+  if (!localStorage.getItem(darkModeKey)) {
+    localStorage.setItem(darkModeKey, false);
+  } else {
+    toggler.checked =
+      localStorage.getItem(darkModeKey).toLowerCase() === "true";
+  }
+
+  toggler.addEventListener("click", function () {
+    localStorage.setItem(darkModeKey, toggler.checked);
+    setMode();
+  });
+
+  function setMode() {
+    const mode = localStorage.getItem(darkModeKey);
+    let bodyTag = document.body;
+    console.log(bodyTag.classList);
+
+    if (mode === "false" && bodyTag.classList.contains(lightDarkModeClass)) {
+      bodyTag.classList.remove(lightDarkModeClass);
+    } else if (
+      mode === "true" &&
+      !bodyTag.classList.contains(lightDarkModeClass)
+    ) {
+      bodyTag.classList.add(lightDarkModeClass);
+    }
+  }
+
+  setMode();
+}
+
+themeLightDarkMode();
