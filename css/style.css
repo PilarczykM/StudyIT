@@ -689,7 +689,7 @@ form p {
 .course-item .average-rating,
 .course-item .average-stars {
   font-weight: 600;
-  color: var(--orange);
+  color: var(--main-color);
 }
 
 .course-item .price {
@@ -782,12 +782,12 @@ form p {
 
 .course-header .average-rating {
   font-weight: 600;
-  color: var(--orange);
+  color: var(--main-color);
 }
 
 .course-header .average-stars i {
   font-size: 1.4rem;
-  color: var(--orange);
+  color: var(--main-color);
 }
 
 .course-header .rating span {
@@ -997,7 +997,7 @@ form p {
 
 .contact-section .contact-item .icon-box {
   grid-area: icon;
-  background-color: red;
+  background-color: var(--main-color);
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
