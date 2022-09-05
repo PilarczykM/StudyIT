@@ -144,3 +144,66 @@ function themeLightDarkMode() {
 }
 
 themeLightDarkMode();
+
+/* -----------------------------------------------
+06. =mobileNavCollapsable
+----------------------------------------------- */
+function mobileNavCollapsable() {
+  const menu = document.querySelector(".js-header-menu");
+  const menuCollapseBreaakpoint = 991;
+
+  function collapse() {
+    menu.querySelector(".active .js-sub-menu").removeAttribute("style");
+    menu.querySelector(".active").classList.remove("active");
+  }
+
+  menu.addEventListener("click", function (event) {
+    const { target } = event;
+
+    if (
+      target.classList.contains("js-toggle-sub-menu") &&
+      window.innerWidth <= menuCollapseBreaakpoint
+    ) {
+      event.preventDefault();
+
+      if (target.parentElement.classList.contains("active")) {
+        collapse();
+        return;
+      }
+
+      if (menu.querySelector(".active")) {
+        collapse();
+      }
+
+      target.parentElement.classList.add("active");
+      target.nextElementSibling.style.maxHeight =
+        target.nextElementSibling.scrollHeight + "px";
+    }
+  });
+}
+
+mobileNavCollapsable();
+
+/* -----------------------------------------------
+07. =mobileNavToggle
+----------------------------------------------- */
+function mobileNavToggle() {
+  const menu = document.querySelector(".js-header-menu");
+  const backdrop = document.querySelector(".js-header-backdrop");
+  const togglers = document.querySelectorAll(".js-header-menu-toggler");
+
+  function toggle() {
+    menu.classList.toggle("open");
+    backdrop.classList.toggle("visible");
+  }
+
+  togglers.forEach((item) => {
+    item.addEventListener("click", function () {
+      toggle();
+    });
+  });
+
+  backdrop.addEventListener("click", toggle);
+}
+
+mobileNavToggle();

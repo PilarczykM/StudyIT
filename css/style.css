@@ -222,7 +222,7 @@ h6 {
   width: 36rem;
   background-color: var(--main-color);
   position: absolute;
-  left: 0;
+  left: 2rem;
   bottom: 0;
   border-radius: 50%;
 }

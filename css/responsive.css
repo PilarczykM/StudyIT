@@ -58,6 +58,12 @@
     background-color: var(--white);
     box-shadow: var(--shadow);
     overflow-y: auto;
+    visibility: hidden;
+  }
+
+  .header-menu.open {
+    right: 0;
+    visibility: visible;
   }
 
   .header .menu {
@@ -74,6 +80,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 1.5rem;
+  }
+
+  .header .menu-item.active > a i {
+    transform: rotate(180deg);
   }
 
   .header .header-close-btn {
@@ -117,7 +127,18 @@
     transition: all 0.5s ease;
     visibility: hidden;
     background-color: var(--white);
-    filter: blur(40px);
+    filter: blur(4rem);
+    z-index: 10;
+  }
+
+  .header-backdrop.visible {
+    opacity: 0.7;
+    visibility: visible;
+  }
+
+  .circular-img-circle {
+    height: 32rem;
+    width: 32rem;
   }
 }
 
